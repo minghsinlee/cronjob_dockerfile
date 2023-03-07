@@ -4,5 +4,6 @@ if [ ! -e "/script/root" ]; then
         echo "[ 注意，如果有些脚本需要调用未安装的程序，请自行在alpine容器中安装好依赖应用 ]"
 else
         echo "[ /script/root文件存在，将启动crond并从root文件执行cron ]"
+        echo "[ 注意，如果有些脚本需要调用未安装的程序，请自行在alpine容器中安装好依赖应用 ]"
         crond -f -c /script
 fi
